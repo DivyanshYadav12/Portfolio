@@ -1,0 +1,743 @@
+/* GENERAL */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  color: rgb(85, 85, 85);
+}
+
+/* TRANSITION */
+
+a,
+.btn {
+  transition: all 300ms ease;
+}
+
+/* DESKTOP NAV */
+
+nav,
+.nav-links {
+  display: flex;
+}
+
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+}
+
+.nav-links {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  text-decoration-color: white;
+}
+
+a:hover {
+  color: grey;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(181, 181, 181);
+}
+
+.logo {
+  font-size: 2rem;
+}
+
+.logo:hover {
+  cursor: default;
+}
+
+/* HAMBURGER MENU */
+
+#hamburger-nav {
+  display: none;
+}
+
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.hamburger-icon span {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: black;
+  text-decoration: none;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links.open {
+  max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+.hamburger-icon span:first-child {
+  opacity: 1;
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+/* SECTIONS */
+
+section {
+  padding-top: 4vh;
+  height: 96vh;
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
+
+.section-container {
+  display: flex;
+}
+
+/* PROFILE SECTION */
+
+#profile {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: 80vh;
+}
+
+.section__pic-container {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+.section__text {
+  align-self: center;
+  text-align: center;
+}
+
+.section__text p {
+  font-weight: 600;
+}
+
+.section__text__p1 {
+  text-align: center;
+}
+
+.section__text__p2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+}
+
+#socials-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+/* ICONS */
+
+.icon {
+  cursor: pointer;
+  height: 2rem;
+}
+
+/* BUTTONS */
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 8rem;
+  border-radius: 2rem;
+}
+
+.btn-color-1,
+.btn-color-2 {
+  border: rgb(53, 53, 53) 0.1rem solid;
+}
+
+.btn-color-1:hover,
+.btn-color-2:hover {
+  cursor: pointer;
+}
+
+.btn-color-1,
+.btn-color-2:hover {
+  background: rgb(53, 53, 53);
+  color: white;
+}
+
+.btn-color-1:hover {
+  background: rgb(0, 0, 0);
+}
+
+.btn-color-2 {
+  background: none;
+}
+
+.btn-color-2:hover {
+  border: rgb(255, 255, 255) 0.1rem solid;
+}
+
+.btn-container {
+  gap: 1rem;
+}
+
+/* ABOUT SECTION */
+
+#about {
+  position: relative;
+}
+
+.about-containers {
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.about-details-container {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-containers,
+.about-details-container {
+  display: flex;
+}
+
+.about-pic {
+  border-radius: 2rem;
+}
+
+.arrow {
+  position: absolute;
+  right: -5rem;
+  bottom: 2.5rem;
+}
+
+.details-container {
+  padding: 1.5rem;
+  flex: 1;
+  background: white;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
+}
+
+.section-container {
+  gap: 4rem;
+  height: 80%;
+}
+
+.section__pic-container {
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+/* EXPERIENCE SECTION */
+
+#experience {
+  position: relative;
+}
+
+.experience-sub-title {
+  color: rgb(85, 85, 85);
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.experience-details-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.article-container {
+  display: flex;
+  text-align: initial;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 2.5rem;
+  justify-content: space-around;
+}
+
+article {
+  display: flex;
+  width: 10rem;
+  justify-content: space-around;
+  gap: 0.5rem;
+}
+
+article .icon {
+  cursor: default;
+}
+
+/* PROJECTS SECTION */
+
+#projects {
+  position: relative;
+}
+
+.color-container {
+  border-color: rgb(163, 163, 163);
+  background: rgb(250, 250, 250);
+}
+
+.project-img {
+  border-radius: 2rem;
+  width: 90%;
+  height: 90%;
+}
+
+.project-title {
+  margin: 1rem;
+  color: black;
+}
+
+.project-btn {
+  color: black;
+  border-color: rgb(163, 163, 163);
+}
+
+/* CONTACT */
+
+#contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
+}
+
+.contact-info-upper-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  background: (250, 250, 250);
+  margin: 2rem auto;
+  padding: 0.5rem;
+}
+
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem;
+}
+
+.contact-info-container p {
+  font-size: larger;
+}
+
+.contact-icon {
+  cursor: default;
+}
+
+.email-icon {
+  height: 2.5rem;
+}
+
+/* FOOTER SECTION */
+
+footer {
+  height: 26vh;
+  margin: 0 1rem;
+}
+
+footer p {
+  text-align: center;
+}
+
+#chatbot-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: white;
+  border: 1px solid #ccc;
+  width: 300px;
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+
+#chatbox {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+#user-input {
+  width: 65%;
+  padding: 5px;
+}
+
+button {
+  padding: 5px 10px;
+}
+
+
+.title {
+    position: relative;
+    display: inline-block; /* Keep this. It makes the box only as wide as the content. */
+    /* REMOVE THIS LINE: margin: 0 auto; (It won't center an inline-block element) */
+
+    background: #fff;
+    mix-blend-mode: color-dodge;
+    perspective: 500px;
+    transform-style: preserve-3d;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    padding: 0.3em 0.6em;
+    border-radius: 0.4em;
+    cursor: default;
+    /* Duplicate font-size: 3rem; can be removed if desired. */
+    text-align: center; /* This centers the text *inside* the title box itself. */
+    overflow: hidden; /* <--- ADD THIS LINE: This clips any content that overflows the element's box. */
+}
+
+/* Ensure these parent sections (or the direct parent of your title) center their inline-block content */
+#about,
+#projects, /* Ensure this is #projects (lowercase 'p') */
+#skills,
+#experience, /* Assuming you have an #experience section */
+#certificates {
+    text-align: center;
+}
+#contact { /* Ensure this is #contact (lowercase 'c') */
+    text-align: center; /* This property will center the `inline-block` .title elements within these sections. */
+}
+
+/* Your specific overrides for h1 inside #Skills and p1 are fine and can remain. */
+#skills h1 {
+    text-align: center;
+}
+#skills .section__text__p1 {
+    text-align: center;
+}
+
+/* Keep the pseudo-element and animation CSS as is: */
+.title::before,
+.title::after {
+    --z: 0px;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    border-radius: inherit;
+    mix-blend-mode: inherit;
+    transform-style: preserve-3d;
+    transform: translate3d(
+        calc(var(--z) * 0px),
+        calc(var(--z) * 0px),
+        calc(var(--z) * 0px)
+    );
+    z-index: -1;
+}
+
+.title::before {
+    background-color: #ff1731;
+}
+
+.title::after {
+    background-color: #5d00ff;
+}
+
+.title:hover {
+    background-color: #fff65b;
+    transition: background 0.3s 0.1s;
+}
+
+.title:hover::before {
+    --z: 0.04;
+    animation: translateWobble 2.2s ease forwards;
+    opacity: 1;
+}
+
+.title:hover::after {
+    --z: -0.06;
+    animation: translateWobble 2.2s ease forwards;
+    opacity: 1;
+}
+
+@keyframes translateWobble {
+    0% {
+        opacity: 0;
+        transform: translate3d(calc(var(--z) * 0px), calc(var(--z) * 0px), calc(var(--z) * 0px));
+    }
+    16% {
+        transform: translate3d(calc(var(--z) * 160px), calc(var(--z) * 160px), calc(var(--z) * 160px));
+    }
+    28% {
+        opacity: 1;
+        transform: translate3d(calc(var(--z) * 70px), calc(var(--z) * 70px), calc(var(--z) * 70px));
+    }
+    44% {
+        transform: translate3d(calc(var(--z) * 130px), calc(var(--z) * 130px), calc(var(--z) * 130px));
+    }
+    59% {
+        transform: translate3d(calc(var(--z) * 85px), calc(var(--z) * 85px), calc(var(--z) * 85px));
+    }
+    73% {
+        transform: translate3d(calc(var(--z) * 110px), calc(var(--z) * 110px), calc(var(--z) * 110px));
+    }
+    88% {
+        opacity: 1;
+        transform: translate3d(calc(var(--z) * 90px), calc(var(--z) * 90px), calc(var(--z) * 90px));
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(calc(var(--z) * 100px), calc(var(--z) * 100px), calc(var(--z) * 100px));
+    }
+}
+
+
+/* Target the experience-details-container ONLY within the #projects section */
+#projects .experience-details-container {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent items from wrapping to the next line */
+    padding-bottom: 25px; /* Adjust padding to accommodate the scrollbar and avoid overlapping the arrow icon */
+    scroll-behavior: smooth; /* Optional: for smoother scrolling when navigating or using scroll snap */
+}
+
+/* Target the about-containers ONLY within the #projects section */
+#projects .about-containers {
+    display: inline-flex; /* Use inline-flex to keep items in a single row */
+    gap: 2rem; /* Maintain the gap between your project containers */
+    /* Ensure no 'flex-wrap: wrap;' or similar is present here */
+}
+
+/* Target the details-container ONLY within the #projects section */
+#projects .details-container {
+    flex: 0 0 auto; /* Prevent individual project cards from shrinking or growing */
+    width: 300px; /* Based on your UI, 300px looks like a good width for each card */
+    white-space: normal; /* Allow text inside the project card to wrap normally */
+    /* Add any other existing styles like border, border-radius, box-shadow, padding etc. */
+}
+
+
+
+/* CERTIFICATES SECTION - Horizontal Scroll */
+#certificates {
+    /* If you have an arrow icon at the bottom of certificates section,
+       make this relative and add padding-bottom as done for #projects */
+    position: relative;
+    padding-bottom: 60px; /* Adjust as needed */
+}
+
+#certificates .experience-details-container {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent items from wrapping to the next line */
+    padding-bottom: 25px; /* Padding for the scrollbar itself */
+    scroll-behavior: smooth; /* Optional: for smoother scrolling */
+}
+
+#certificates .about-containers {
+    display: inline-flex; /* Use inline-flex to keep items in a single row */
+    gap: 2rem; /* Maintain the gap between your certificate containers */
+    /* Ensure no 'flex-wrap: wrap;' is present */
+}
+
+#certificates .details-container {
+    flex: 0 0 auto; /* Prevent individual certificate cards from shrinking or growing */
+    width: 300px; /* Consistent width for each card, adjust to your preference */
+    white-space: normal; /* Allow text inside the certificate card to wrap normally */
+    /* Add existing styles for your certificate cards (e.g., border, border-radius, background, box-shadow) */
+    border: 1px solid #ddd; /* Example */
+    border-radius: 15px; /* Example */
+    padding: 20px; /* Example */
+    text-align: center; /* Example */
+    background-color: white; /* Example */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Example */
+}
+
+/* If you have an arrow icon specific to the certificates section, style it here */
+#certificates .icon.arrow {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    z-index: 10;
+    transition: all 300ms ease;
+}
+
+#certificates .icon.arrow:hover {
+    transform: translateX(-50%) translateY(-5px);
+} 
+
+
+
+
+/* Styling for the certificate thumbnails to indicate clickability */
+.certificates-thumbnail {
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out; /* Optional: subtle hover effect */
+}
+
+.certificates-thumbnail:hover {
+    transform: scale(1.02); /* Optional: slight zoom on hover */
+}
+
+/* Lightbox overlay styles */
+.lightbox {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place even when scrolling */
+    z-index: 1000; /* Sit on top (should be higher than any other content) */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if image is too large */
+    background-color: rgba(0, 0, 0, 0.9); /* Black background with opacity */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-direction: column; /* To allow close button above image if needed */
+    animation: fadeIn 0.3s ease-in-out; /* Fade in animation */
+}
+
+/* Lightbox content (the enlarged image) */
+.lightbox-content {
+    margin: auto; /* Center image within flex container */
+    display: block; /* Ensure it behaves as a block element */
+    max-width: 90%; /* Max width of the image */
+    max-height: 90%; /* Max height of the image */
+    object-fit: contain; /* Ensures the image fits within the bounds without cropping */
+    animation: zoomIn 0.3s ease-in-out; /* Zoom in animation */
+}
+
+/* Close button style */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+    z-index: 1001; /* Ensure close button is above everything */
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes zoomOut {
+    from { transform: scale(1); opacity: 1; }
+    to { transform: scale(0.8); opacity: 0; }
+}

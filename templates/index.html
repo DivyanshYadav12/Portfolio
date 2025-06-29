@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='mediaqueries.css') }}" />
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500;600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="chatbot-container">
+      <div id="chatbox"></div>
+      <input type="text" id="user-input" placeholder="Ask me anything..." />
+      <button onclick="sendMessage()">Send</button>
+    </div>      
+    <nav id="desktop-nav">
+      <div class="logo">Divyansh Yadav</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#certificates">Certificates</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Divyansh Yadav</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#certificates" onclick="toggleMenu()">Certificates</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./static/assets/profile-pic.jpg" alt="profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Divyansh Yadav</h1>
+        <p class="section__text__p2">Software Developer</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./static/assets/resume-example.pdf')"
+          >
+            Download resume
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./static/assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/divyansh-yadav-464027271/'"
+          />
+          <img
+            src="./static/assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/DivyanshYadav12'"
+          />
+        </div>
+      </div>
+      <img
+        src="./static/assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#about'"
+      />
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title"><span>About Me</span></h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./static/assets/about-pic.png"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./static/assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>3 Month's <br />AI Intern</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./static/assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>B.Tech in computer science & specilization in AI & ML</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              I'm Divyansh Yadav, a final-year B.Tech Computer Science student specializing in Artificial Intelligence and Machine
+              Learning. I have hands-on experience in Python, machine learning, and web development using tools like Django, Flask,
+              TensorFlow, and OpenCV. I've built AI-driven projects including an intelligent traffic management system and worked on
+              real-time log monitoring dashboards. I'm passionate about building scalable, impactful AI solutions that bridge
+              technology with real-world needs.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./static/assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#skills'"
+      />
+    </section>
+    <section id="skills">
+    <p class="section__text__p1">Explore My</p>
+    <h1 class="title">Skills</h1>
+    <div class="experience-details-container">
+        <div class="about-containers">
+
+            <div class="details-container">
+                <h2 class="experience-sub-title">Development</h2>
+                <div class="article-container">
+                    <article>
+                        <img src="./static/assets/checkmark.png" alt="Experience icon" class="icon" />
+                        <div><h3>HTML</h3><p>Experienced</p></div>
+                    </article>
+                    <article>
+                        <img src="./static/assets/checkmark.png" alt="Experience icon" class="icon" />
+                        <div><h3>CSS</h3><p>Experienced</p></div>
+                    </article>
+                    <article>
+                        <img src="./static/assets/checkmark.png" alt="Experience icon" class="icon" />
+                        <div><h3>python</h3><p>Advance</p></div>
+                    </article>
+                    <article>
+                        <img src="./static/assets/checkmark.png" alt="Experience icon" class="icon" />
+                        <div><h3>JavaScript</h3><p>Basic</p></div>
+                    </article>
+                    <article>
+                        <img src="./static/assets/checkmark.png" alt="Experience icon" class="icon" />
+                        <div><h3>C++</h3><p>Experienced</p></div>
+                    </article>
+                </div>
+            </div>
+
+            <div class="details-container">
+                <h2 class="experience-sub-title">Tools & Framework's</h2>
+                <div class="article-container">
+                    <article>
+                        <img src="./static/assets/checkmark.png" alt="Experience icon" class="icon" />
+                        <div><h3>MySQL</h3><p>Intermediate</p></div>
+                    </article>
+                    <article>
+                        <img src="./static/assets/checkmark.png" alt="Experience icon" class="icon" />
+                        <div><h3>InfluxDB</h3><p>Basic</p></div>
+                    </article>
+                    <article>
+                        <img src="./static/assets/checkmark.png" alt="Experience icon" class="icon" />
+                        <div><h3>Grafana</h3><p>Basic</p></div>
+                    </article>
+                    <article>
+                        <img src="./static/assets/checkmark.png" alt="Experience icon" class="icon" />
+                        <div><h3>Scikit-Learn</h3><p>Basic</p></div>
+                    </article>
+                    <article>
+                        <img src="./static/assets/checkmark.png" alt="Experience icon" class="icon" />
+                        <div><h3>Git</h3><p>Intermediate</p></div>
+                    </article>
+                    <article>
+                        <img src="./static/assets/checkmark.png" alt="Experience icon" class="icon" />
+                        <div><h3>TensorFlow</h3><p>Basic</p></div>
+                    </article>
+                </div>
+            </div>
+
+            <div class="details-container">
+                <h2 class="experience-sub-title">CS Fundamental's</h2>
+                <div class="article-container">
+                    <article>
+                        <img src="./static/assets/checkmark.png" alt="Experience icon" class="icon" />
+                        <div><h3>OOPS</h3><p>Intermediate</p></div>
+                    </article>
+                    <article>
+                        <img src="./static/assets/checkmark.png" alt="Experience icon" class="icon" />
+                        <div><h3>Data Structure & Algorithms</h3><p>Intermediate</p></div>
+                    </article>
+                    <article>
+                        <img src="./static/assets/checkmark.png" alt="Experience icon" class="icon" />
+                        <div><h3>Operating System</h3><p>Intermediate</p></div>
+                    </article>
+                    <article>
+                        <img src="./static/assets/checkmark.png" alt="Experience icon" class="icon" />
+                        <div><h3>Computer Networks</h3><p>Intermediate</p></div>
+                    </article>
+                    <article>
+                        <img src="./static/assets/checkmark.png" alt="Experience icon" class="icon" />
+                        <div><h3>Nurak Networks</h3><p>Intermediate</p></div>
+                    </article>
+                    <article>
+                        <img src="./static/assets/checkmark.png" alt="Experience icon" class="icon" />
+                        <div><h3>AI & ML</h3><p>Intermediate</p></div>
+                    </article>
+                </div>
+            </div>
+
+        </div> </div> <img
+        src="./static/assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+    />
+</section>
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./static/assets/smart_traffic.jpg"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Intelligent-Traffic-Management-System-Using-ANPR-and-ATCC</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/DivyanshYadav12/Intelligent-Traffic-Management-System-Using-ANPR-and-ATCC.git'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/DivyanshYadav12'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./static/assets/text_recognition.jpg"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Handwritten-text-Recognition</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/DivyanshYadav12/Handwritten-text-Recognition.git'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/DivyanshYadav12'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./static/assets/credit.jpg"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">credit Score Pridiction</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/DivyanshYadav12/credit_Score_Pridiction.git'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/DivyanshYadav12'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+
+                    <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./static/assets/credit.jpg"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">credit Score Pridiction</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/DivyanshYadav12/credit_Score_Pridiction.git'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/DivyanshYadav12'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./static/assets/disease.jpg"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Disease_pridiction</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/DivyanshYadav12/Disease_pridiction.git'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/DivyanshYadav12'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./static/assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#certificates'"
+      />
+    </section>
+
+    <section id="certificates">
+    <p class="section__text__p1">Browse My Recent</p>
+    <h1 class="title">Certificates</h1>
+    <div class="experience-details-container">
+        <div class="about-containers">
+            <div class="details-container color-container">
+                <div class="article-container">
+                    <img
+                        src="./static/assets/certificate/artificial intelligence.png" /* Smaller image for display in the card */
+                        data-full-src="./static/assets/certificate/artificial intelligence.png" /* Full-size image for the lightbox */
+                        alt="Certificate One Thumbnail"
+                        class="project-img certificate-thumbnail"
+                    />
+                </div>
+                <h2 class="experience-sub-title project-title">Artificial Intelligence</h2>
+            </div>
+
+            <div class="details-container color-container">
+                <div class="article-container">
+                    <img
+                        src="./static/assets/certificate/computer_vision.png"
+                        data-full-src="./static/assets/certificate/computer_vision.png"
+                        alt="Certificate Two Thumbnail"
+                        class="project-img certificate-thumbnail"
+                    />
+                </div>
+                <h2 class="experience-sub-title project-title">Computer_Vision</h2>
+            </div>
+
+            <div class="details-container color-container">
+                <div class="article-container">
+                    <img
+                        src="./static/assets/certificate/Data_Science.png"
+                        data-full-src="./static/assets/certificate/Data_Science.png"
+                        alt="Certificate Three Thumbnail"
+                        class="project-img certificate-thumbnail"
+                    />
+                </div>
+                <h2 class="experience-sub-title project-title">Data_Science</h2>
+            </div>
+
+            <div class="details-container color-container">
+                <div class="article-container">
+                    <img
+                        src="./static/assets/certificate/Deep Learning for Developers.png"
+                        data-full-src="./static/assets/certificate/Deep Learning for Developers.png"
+                        alt="Certificate Four Thumbnail"
+                        class="project-img certificate-thumbnail"
+                    />
+                </div>
+                <h2 class="experience-sub-title project-title">Deep Learning for Developers</h2>
+            </div>
+
+            <div class="details-container color-container">
+                <div class="article-container">
+                    <img
+                        src="./static/assets/certificate/intro Deep Learning.png"
+                        data-full-src="./static/assets/certificate/intro Deep Learning.png"
+                        alt="Certificate Five Thumbnail"
+                        class="project-img certificate-thumbnail"
+                    />
+                </div>
+                <h2 class="experience-sub-title project-title">Introduction of Deep Learning</h2>
+            </div>
+
+            <div class="details-container color-container">
+                <div class="article-container">
+                    <img
+                        src="./static/assets/certificate/NLP.png"
+                        data-full-src="./static/assets/certificate/NLP.png"
+                        alt="Certificate Six Thumbnail"
+                        class="project-img certificate-thumbnail"
+                    />
+                </div>
+                <h2 class="experience-sub-title project-title">Natural Language Processing</h2>
+            </div>
+
+            <div class="details-container color-container">
+                <div class="article-container">
+                    <img
+                        src="./static/assets/certificate/OpenAI GPT Models.png"
+                        data-full-src="./static/assets/certificate/OpenAI GPT Models.png"
+                        alt="Certificate Seven Thumbnail"
+                        class="project-img certificate-thumbnail"
+                    />
+                </div>
+                <h2 class="experience-sub-title project-title">Introduction to OpenAI GPT Models</h2>
+            </div>
+
+        </div> </div> 
+</section>
+
+      <div id="lightbox" class="lightbox">
+          <span class="close-btn">&times;</span> <img class="lightbox-content" id="lightbox-img" src="" alt="Enlarged Certificate">
+      </div>
+      <img
+        src="./static/assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+
+
+
+
+
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./static/assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox">Email</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./static/assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/divyansh-yadav-464027271/">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certificates">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2025 Divyansh_yadav. All Rights Reserved.</p>
+    </footer>
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+  </body>
+</html>

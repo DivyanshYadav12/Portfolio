@@ -1,0 +1,39 @@
+text,label
+"Divyansh Yadav",personal_information
+"Phone: 8303742240",personal_information
+"Email: mrdk45789@gmail.com",personal_information
+"LinkedIn, GitHub",personal_information
+"Programming Languages: C, C++, Python",Skill
+"Web Technologies: HTML, CSS, Flask, Django",Skill
+"Database: MySQL, SQL, InfluxDB",Skill
+"Tools & Frameworks: VSCode, Grafana, MS Office, GitHub, Scikit-learn, TensorFlow, Pandas, NumPy, Matplotlib",Skill
+"CS Fundamentals: OOPS, DBMS, OS, DSA, Computer Networks, Neural Networks, Soft Computing",Skill
+"AI Intern | Infosys Springboard | November 2024 – January 2025",Experience
+"Developed and deployed an AI-driven Traffic Management System using Python, OpenCV, YOLO, EasyOCR, and Flask",Experience
+"Enabled dynamic signal control based on real-time traffic density",Experience
+"Integrated ATCC and ANPR modules for automated vehicle detection and routing",Experience
+"Simulated decentralized data flow with distributed systems concepts",Experience
+"Achieved a 40% reduction in congestion and 35% increase in operational efficiency",Experience
+"Trainee | Blue Book Foundation, Lucknow | August 2023 – November 2023",Experience
+"Developed a Python-based data pipeline to parse system logs and extract performance metrics",Experience
+"Ingested data into InfluxDB and visualized insights on Grafana dashboards",Experience
+"Improved system monitoring and performance analysis by 50%",Experience
+"System Task Visualizer | Self-Driven Project",Project
+"Built a real-time system monitoring pipeline using Python and InfluxDB",Project
+"Visualized system metrics on Grafana dashboards",Project
+"Improved monitoring efficiency by 45% and reduced troubleshooting time by 50%",Project
+"Creditworthiness Prediction Model | Used Logistic Regression and Random Forest",Project
+"Achieved 92% accuracy in classifying financial reliability",Project
+"Disease Prediction System | Used symptom-based supervised learning",Project
+"Achieved 90% prediction accuracy for early-stage disease detection",Project
+"Handwritten Character Recognition | CNN model on MNIST",Project
+"Achieved 98% accuracy in recognizing handwritten digits",Project
+"File Conversion and Image Processing Platform | Flask-based web app",Project
+"Supported file upload, format conversion (PNG↔JPG, PDF↔Images, DOCX→PDF), and image processing",Project
+"Implemented responsive UI with custom CSS",Project
+"B. Tech in Computer Science Engineering (AI & ML)",Education
+"KMC Language University, Lucknow, UP | July 2021 – June 2025",Education
+"CGPA: 8.14",Education
+"Certificate: Introduction to Artificial Intelligence | August 2024",Certificate
+"Certificate: Introduction to Deep Learning | August 2024",Certificate
+"Certificate: Introduction to Natural Language Processing | August 2024",Certificate
